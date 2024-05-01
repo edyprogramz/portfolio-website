@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    border: 2px solid black;
+    background-color: #F5F5F5;
+    padding: 10px;
+    display: flex;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 0px 400px 0px rgba(20,0,255,0.75);
+    -webkit-box-shadow: 1px 0px 400px 0px rgba(20,0,255,0.75);
+    -moz-box-shadow: 1px 0px 400px 0px rgba(20,0,255,0.75);
+}
+#left-side{
+    /* border: 2px solid blue; */
+    flex: .1;
+    padding: 10px 0;
+}
+.aside{
+    border: 2px solid #E6F2FF;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    margin: auto;
+    /* position: absolute; */
+    /* z-index: 10; */
+    /* display: none; */
+}
+.aside .sections-tag{
+    border: 1px solid black;
+    margin-bottom: 5px;
+    padding: 5px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: #E6F2FF;
+}
+.aside .sections-tag:hover{
+    background: gray;
+    transition: .3s;
+    p{
+        color: rgb(250, 250, 250);
+    }
+}
+/* .aside .sections-tag div{} */
+
+.aside .sections-tag img{
+    height: 20px;
+}
+.aside .sections-tag p{
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+#right-side{
+    /* border: 2px solid blue; */
+    /* background: #ffffff; */
+    padding: 5px 10px;
+    flex: .9;
+    /* display: flex; */
+    /* box-shadow: 0px 0px 8px 0px rgba(77,123,148,0.75); */
+/* -webkit-box-shadow: 0px 0px 8px 0px rgba(77,123,148,0.75); */
+/* -moz-box-shadow: 0px 0px 8px 0px rgba(77,123,148,0.75); */
+}
+.section-content{
+    display: flex;
+}
+.section-content .content{
+    /* border: 2px solid red; */
+    flex: 1;
+    padding: 10px;
+    /* background: #00d4ff; */
+    box-shadow: 0px 0px 8px 0px rgba(77,123,148,0.75);
+-webkit-box-shadow: 0px 0px 8px 0px rgba(77,123,148,0.75);
+-moz-box-shadow: 0px 0px 8px 0px rgba(77,123,148,0.75);
+}
+.section-content .profile-pic{
+    border-bottom: 2px solid black;
+    margin: 0 15px;
+    width: fit-content;
+    /* flex: .4; */
+    padding: 10px;
+    height: 300px;
+    text-align: right;
+    bottom: 0;
+}
+.section-content .profile-pic img{
+    height: 100%;
+}
+
+.section-content .content p span{
+    font-size: larger;
+    font-family: "Dancing Script", cursive;
+    margin-left: 5px;
+    color: red;
+    
+}
+.section-content .content{
+    font-family: "Outfit", sans-serif;
+}
+.section-content .content .btn{
+    border: 2px solid black;
+    width: fit-content;
+    padding: 10px;
+    cursor: pointer;
+}
+.section-content .content .btn:hover{
+    background-color: black;
+    color: aliceblue;
+    transition: .5s;
+}
+
+.aboutme{
+    /* width: 70%; */
+    margin: 20px 0;
+    /* margin: 10px 150px 10px 30px; */
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(2, 47.5%);
+    column-gap: 5%;
+    row-gap: 3%;
+    padding: 10px;
+}
+.aboutme div{
+    border-bottom: 3px solid #0D6A6E;
+    /* width: 100%; */
+    padding: 10px;
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    #right-side{
+        /* border: 2px solid rgb(0, 255, 21); */
+        padding: 5px 10px;
+        flex: .9;
+        /* display: flex; */
+    }
+    .section-content{
+        display: block;
+    }
+    .section-content .profile-pic{
+        border: none;
+        margin: 0;
+        
+    }
+    #left-side{
+        /* border: 2px solid blue; */
+        flex: .25;
+        /* padding: 10px 0; */
+    }
+    #right-side{
+        /* border: 2px solid blue; */
+        /* padding: 5px 10px; */
+        flex: .75;
+        /* display: flex; */
+    }
+    .aboutme{
+        /* width: 70%; */
+        /* margin: 10px 290px 10px 10px; */
+        /* border: 1px solid black; */
+        display: block;
+        /* grid-template-columns: repeat(2, 47.5%); */
+        /* column-gap: 5%; */
+        /* row-gap: 3%; */
+        /* padding: 10px; */
+    }
+    .aboutme div{
+        /* border-bottom: 3px solid blue; */
+        /* width: 100%; */
+        /* padding: 10px; */
+    }
+}
+
+
+#about-content,
+#contact-content,
+#services-content{
+    display: none;
+}
+
